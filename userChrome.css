@@ -1,0 +1,191 @@
+
+/* tabs --- rotate close button */
+tabs#tabbrowser-tabs.tabbrowser-tabs .tab-close-button:hover {
+    transform: rotate(1440deg) !important;
+    transition: transform ease-in-out 2s !important;
+}
+
+
+/*Change SSL color padlock */
+#connection-icon {fill: #a569bd !important;}
+#identity-box.verifiedIdentity #identity-icon-labels {color: #a569bd !important;}
+#identity-box.verifiedIdentity { --urlbar-separator-color: #a569bd !important;}
+
+.identity-popup-connection-secure {color: #a569bd !important;}
+#identity-popup[connection^=secure] #identity-popup-securityView, #identity-popup[connection^=secure] #identity-popup-security-content {fill: #a569bd !important;}
+
+
+/*bookmarks toobar only when a new tab is opened*/
+#main-window #PersonalToolbar {
+  visibility: collapse !important;
+}
+#main-window[title^="about:newtab"] #PersonalToolbar,
+#main-window[title^="New Tab"] #PersonalToolbar,
+#main-window[title^="Nightly"] #PersonalToolbar,
+#main-window[title^="Mozilla Firefox"] #PersonalToolbar, 
+#main-window[title^="Firefox"] #PersonalToolbar {
+  visibility: visible !important;
+}
+
+
+/*blue bar*/
+.tab-line { display: none !important; }
+
+
+/*favicon disable*/
+.tabbrowser-tab .tab-icon-image { display:none!important; }
+
+
+/*Sign in to sync remove*/
+#appMenu-fxa-container, #appMenu-fxa-container + toolbarseparator {
+  display: none !important;
+}
+
+
+/*tab throbber color*/
+.tab-throbber::before {
+fill: green !important;
+opacity: 1 !important;
+}
+
+
+/*bookmark bar*/
+/* 1 pixel space on the left and right side of each bookmark item and make all bookmarks buttons bigger */
+#personal-bookmarks #PlacesToolbar toolbarbutton.bookmark-item {
+    margin: 0 1px !important;
+    padding: 4px 6px !important;
+}
+
+/* Remove the extra 1 pixel of space added to the left side on the first bookmark item */
+#personal-bookmarks #PlacesToolbar toolbarbutton.bookmark-item:first-child {
+    margin: 0 1px 0 0 !important;
+}
+
+/* 10 pixels extra space on the left and right side of the seperators and make them 25% opacity */
+#personal-bookmarks #PlacesToolbar toolbarseparator {
+    margin: 0 5px !important;
+    opacity: 0.25 !important;
+}
+
+/*url bar font and style*/
+#urlbar-container
+{
+  margin-left: 11px !important;
+}
+
+#urlbar[focused="true"],
+  .searchbar-textbox[focused="true"]
+{
+  border: 0.5px solid #888888 !important;
+  box-shadow: none !important;
+}
+
+
+/* color icon*/
+@-moz-document url(chrome://browser/content/browser.xul),
+  url(chrome://global/content/customizeToolbar.xul)
+{
+
+/*BLUE*/
+  #tabview-button .toolbarbutton-icon,
+  #save-page-button .toolbarbutton-icon,
+  #developer-button .toolbarbutton-icon,
+  #preferences-button .toolbarbutton-icon,
+  #webrtc-status-button .toolbarbutton-icon
+  {
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'invert\'>\
+    <feColorMatrix in='SourceGraphic' type='matrix' values=\
+    '0.38 0.3 0.3 0.0 0.0 \
+    0.3 0.38 0.3 0.0 0.0 \
+    0.3 0.3 0.38 0.0 0.3 \
+    0.0 0.0 0.0 1.0 0.0'/></filter></svg>#invert") !important;
+  }
+
+/*LIME*/
+  #pocket-button .toolbarbutton-icon,
+  #context-back,
+  #context-forward,
+  #back-button .toolbarbutton-icon, 
+  #forward-button .toolbarbutton-icon,
+  #new-window-button .toolbarbutton-icon,
+  #new-tab-button .toolbarbutton-icon,
+  #go-button:hover,
+  #downloads-button:not([attention]),
+  #zoom-in-button .toolbarbutton-icon,
+  #copy-button .toolbarbutton-icon,
+  #add-ons-button .toolbarbutton-icon,
+  #find-button .toolbarbutton-icon,
+  #sidebar-button .toolbarbutton-icon
+  {
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'invert\'>\
+    <feColorMatrix in='SourceGraphic' type='matrix' values=\
+    '0.38 0.3 0.3 0.0 0.1 \
+    0.3 0.38 0.3 0.0 0.28 \
+    0.3 0.3 0.38 0.0 0.0 \
+    0.0 0.0 0.0 1.0 0.0'/></filter></svg>#invert") !important;
+  }
+
+/*RED refresh*/
+  #context-stop,
+  .tabs-closebutton:hover .toolbarbutton-icon,
+  .tab-close-button:hover .toolbarbutton-icon,
+  #downloads-button[paused] .toolbarbutton-icon,
+  #urlbar-stop-button:hover,
+  #cut-button .toolbarbutton-icon,
+  #zoom-out-button .toolbarbutton-icon,
+  #stop-button .toolbarbutton-icon,
+  #characterencoding-button .toolbarbutton-icon
+  {
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'invert\'>\
+    <feColorMatrix in='SourceGraphic' type='matrix' values=\
+    '0.38 0.3 0.3 0.0 0.4 \
+    0.3 0.38 0.3 0.0 0.0 \
+    0.3 0.3 0.38 0.0 0.0 \
+    0.0 0.0 0.0 1.0 0.0'/></filter></svg>#invert") !important;
+  }
+
+/*ROYAL*/
+  #tabview-button .toolbarbutton-icon,
+  #context-reload,
+  #history-button .toolbarbutton-icon,
+  #history-panelmenu .toolbarbutton-icon,
+  #fullscreen-button .toolbarbutton-icon,
+  #urlbar-reload-button:hover,
+  #paste-button .toolbarbutton-icon,
+  #reload-button .toolbarbutton-icon
+  {
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'invert\'>\
+    <feColorMatrix in='SourceGraphic' type='matrix' values=\
+    '0.38 0.3 0.3 0.0 0.0 \
+    0.3 0.38 0.3 0.0 0.07 \
+    0.3 0.3 0.38 0.0 0.3 \
+    0.0 0.0 0.0 1.0 0.0'/></filter></svg>#invert") !important;
+  }
+
+/*AZURE hamburger */
+  #urlbar-go-button:not(:hover),
+  #urlbar .autocomplete-history-dropmarker:not(:hover),
+  #searchbar .searchbar-search-button:not([addengines]),
+  #searchbar .search-go-button,
+  #context-bookmarkpage,  
+  #PanelUI-menu-button .toolbarbutton-icon, 
+  #nav-bar-overflow-button .toolbarbutton-icon,
+  #classic_bm_button23-toolbar-button > .toolbarbutton-icon,
+  #bookmarks-menu-button:not([starred]) .toolbarbutton-icon,
+  #bookmarks-button .toolbarbutton-icon,
+  #bookmarks-menu-button > .toolbarbutton-menubutton-dropmarker > .dropmarker-icon
+  {
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'invert\'>\
+    <feColorMatrix in='SourceGraphic' type='matrix' values=\
+    '0.38 0.3 0.3 0.0 0.0 \
+    0.3 0.38 0.3 0.0 0.15 \
+    0.3 0.3 0.38 0.0 0.3 \
+    0.0 0.0 0.0 1.0 0.0'/></filter></svg>#invert") !important;
+  }
+
+
+
+/*#TabsToolbar .tabbrowser-tab {
+    color: saddlebrown !important;
+}
+*/
