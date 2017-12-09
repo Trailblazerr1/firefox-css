@@ -1,0 +1,49 @@
+
+/*background clor of tab
+orangish - FFEEDE
+*/
+@-moz-document regexp('about:home'), regexp('about:newtab'), url("about:home"), url("about:newtab") {
+    body {
+        background-color: #FFCDB2 !important;
+        }
+}
+
+/*@-moz-document url("about:newtab"), url('about:home') {
+    body {
+        background-color: #000000 !important;
+        background-image: url(http://static.simpledesktops.com/uploads/desktops/2016/08/28/Wind-Vector-resize.png) !important;
+        background-repeat: no-repeat !important;
+        background-position: center !important;
+        background-size: 100% 100%;
+    }
+}
+*/
+/*@-moz-document regexp('about:home'), regexp('about:newtab'), url("about:home"), url("about:newtab")
+{
+  .outer-wrapper
+  {
+    background-image: url('https://cdn-media-1.lifehack.org/wp-content/files/2013/04/54-1024x576.jpg') !important;
+    background-size: 100% 100%;
+    background-position: center !important;
+  }
+
+  .section-title span
+  {
+    color: white !important;
+    fill: red !important;
+  }
+
+  .top-sites-list .top-site-outer .title .icon
+  {
+    fill: black !important;
+  }
+
+  .top-sites-list
+  {
+    color: black;
+    font-weight: bold;
+  }
+}*/
+
+
+
