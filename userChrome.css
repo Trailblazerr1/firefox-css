@@ -32,12 +32,15 @@ tabs#tabbrowser-tabs.tabbrowser-tabs .tab-close-button:hover {
 .tab-line { display: none !important; }
 
 
-/*favicon disable*/
-.tabbrowser-tab .tab-icon-image { display:none!important; }
+/*favicon disable
+.tabbrowser-tab .tab-icon-image { display:none!important; }*/
+.tabbrowser-tab[label="New Tab"] .tab-icon-image {  
+  display: none !important;  
+}
 
 
-/*Sign in to sync remove*/
-#appMenu-fxa-container, #appMenu-fxa-container + toolbarseparator {
+/*Edit hamburger menu*/
+#appMenu-fxa-container, #appMenu-fxa-container + toolbarseparator, #appMenu-zoom-controls, #appMenu-zoom-controls +toolbarseparator, #appMenu-edit-controls, #appMenu-edit-controls + toolbarseparator {
   display: none !important;
 }
 
@@ -189,3 +192,8 @@ opacity: 1 !important;
     color: saddlebrown !important;
 }
 */
+/*remove items from context menu*/
+#context-openlinkprivate, #context-savelink, #context-bookmarklink, #context-inspect, #context-sendlinktodevice, #context-viewpartialsource-selection, #context-savelinktopocket, #context-navigation, #context-sep-navigation { 
+    display: none !important 
+}
+
