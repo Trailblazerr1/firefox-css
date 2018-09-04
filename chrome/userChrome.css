@@ -1,0 +1,45 @@
+@import "_vars.css";
+@import "_browser.css";
+
+/*favicon disable
+.tabbrowser-tab .tab-icon-image { display:none!important; }*/
+.tabbrowser-tab[label="New Tab"] .tab-icon-image {  
+  display: none !important;  
+}
+
+/*Edit hamburger menu*/
+#appMenu-zoom-controls, #appMenu-zoom-controls +toolbarseparator, #appMenu-edit-controls,#appMenu-save-file-button,#appMenu-print-button, #appMenu-edit-controls + toolbarseparator {
+  display: none !important;
+}
+
+/*remove items from context menu*/
+#context-openlinkprivate, #context-savelink, #context-bookmarklink, #context-inspect, #context-sendlinktodevice, #context-viewpartialsource-selection, #context-savelinktopocket, #context-navigation, #context-sep-navigation { 
+    display: none !important 
+}
+
+
+
+
+
+/* Firefox context Customization */
+
+menupopup {
+    -moz-appearance: none !important;
+    color: #808080 !important;
+    background-color: #1c1c1c !important;
+}
+#contentAreaContextMenu menuseparator {
+    display: none !important;
+}
+
+
+/*hamburger minify*/
+
+#widget-overflow-mainView > .panel-subview-body > toolbarseparator, .PanelUI-subView menuseparator, .PanelUI-subView toolbarseparator, .cui-widget-panelview menuseparator, .cui-widget-panel toolbarseparator {
+    -moz-appearance: none;
+    min-height: 0;
+    border-top: 0px solid var(--panel-separator-color)!important;
+    border-bottom: none;
+    margin: 0px 0!important;
+    padding: 0;
+}
