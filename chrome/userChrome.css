@@ -1,5 +1,8 @@
-@import "_vars.css";
-@import "_browser.css";
+@import "global/variables.css";
+@import "global/global.css";
+@import "tabbar/tabbar.css";
+@import "navbar/navbar.css";
+@import "personalbar/personalbar.css";
 
 /*favicon disable
 .tabbrowser-tab .tab-icon-image { display:none!important; }*/
@@ -43,3 +46,5 @@ menupopup {
     margin: 0px 0!important;
     padding: 0;
 }
+
+
